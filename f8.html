@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login</title>
+<script>
+ function login()
+	{
+var uname= document.getElementById("t1").value;
+var pwd= document.getElementById("t2").value;	
+var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+var letters = /^[A-Za-z]+$/;
+		if(uname=='')
+		{
+			alert('Please enter the user name.');
+		}
+		else if(!letters.test(uname))
+		{
+			alert('User name field requires only alphabets');
+		}
+		else if(pwd=='')
+		{
+			alert('Please enter Password');
+		}
+		else if(document.getElementById("t2").value.length < 6)
+		{
+			alert ('Password minimum length is 6');
+		}
+else
+		{				                            
+                 alert('Thank You for Login');
+		}
+	}
+</script>
+</head>
+<body>
+<h2>Login</h2>
+<tr>
+	<td align="right">Enter Username :</td>
+	<td><input type="text" placeholder="Enter Username here" id="t1"  name="username"/></td>
+</tr>
+<tr>
+	<td align="right">Enter Password :</td>
+	<td><input type="password" placeholder="Enter Password here" id="t2" name="password" /></td>
+	</tr>
+<input type="submit" value="login" class="btn"name= "submit" onclick="login()" /></td>
+</body>
+</html> 
